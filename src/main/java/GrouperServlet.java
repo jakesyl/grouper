@@ -9,6 +9,13 @@ import org.apache.log4j.Logger;
 
 public class GrouperServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(GrouperServlet.class.getName());
+    /**
+     * @author Jake Sylvstre
+     * @param HttpServletRequest -> request object
+     * @param HttpServletResponse -> response object
+     * @return void
+     * pipes response to tomcat
+     */
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         BasicConfigurator.configure();
         String phoneNumber = request.getParameter("From");
